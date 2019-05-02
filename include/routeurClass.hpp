@@ -10,10 +10,11 @@ using namespace std;
 
 class routeur
 {
+	public:
 	routeur();
 	~routeur();
 
-	void trameCallBack(const std_msgs::ByteMultiArray& msg);
+	static void trameCallBack(const std_msgs::ByteMultiArray& msg);
 
 	private:
 	int length;
