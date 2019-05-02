@@ -1,23 +1,23 @@
-#ifdef ROUTEUR_CLASSE
-#define ROUTEUR_CLASSE
-
 #include <iostream>
 #include <std_msgs/ByteMultiArray.h>
-#include <vector.h>
+#include <vector>
 #include <stdint.h>
 
 #include <paramateur.hpp>
+extern int MAX_LENGTH_TRAME;
 
 using namespace std;
 
 class routeur
 {
+	routeur();
+	~routeur();
 
-	
+	void trameCallBack(const std_msgs::ByteMultiArray& msg);
+
 	private:
-	vector< uint8_t[MAX_LENGTH_TRAME] > buf;
+	int length;
+	vector< vector<uint8_t> > buff;
 
 };
 
-
-#endif
